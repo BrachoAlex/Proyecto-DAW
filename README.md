@@ -1,5 +1,3 @@
-# Proyecto-DAW
-Repo que contiene el proyecto. 
 .env:
 PORT = 5000
 MONGO_HOST= mongodb://localhost:27017/closet
