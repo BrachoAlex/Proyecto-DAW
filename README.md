@@ -27,3 +27,5 @@ npm i express
 
 npm i concurrently
 npm i nodemon
+
+Problema: Las rutas no pueden ser accedidas: app.js
