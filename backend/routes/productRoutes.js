@@ -6,11 +6,11 @@ const {getAllProducts, getProductById} = require("../controller/productControlle
 //GET ALL ITEMS/PRODUCTS FROM DB
 //ROUTE: /api/products
 
-router.get('/', getAllProducts);
+router.get("/", getAllProducts);
 
 //GET SINGLE ITEM/PRODUCT BY ID FROM DB
 //ROUTE: /api/products/:id
 
-router.get('/',getProductById);
+router.get("/",getProductById);
 
 module.exports = router;
