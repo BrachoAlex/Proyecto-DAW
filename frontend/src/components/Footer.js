@@ -13,7 +13,7 @@ export default function Footer() {
                 <li className="list-inline-item"><a href="#">Footwear</a></li>
                 <li className="list-inline-item"><a href="#">Accesories</a></li>
             </ul>
-            <p className="copyright">Company Name © 2022</p>
+            <p className="copyright">My Closet © 2022</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
