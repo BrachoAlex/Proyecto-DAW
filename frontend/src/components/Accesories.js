@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from "./Navbar";
 
-
 export default function Accesories() {
   return (
     <div>
@@ -10,3 +9,4 @@ export default function Accesories() {
     </div>
   )
 }
+

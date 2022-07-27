@@ -1,7 +1,7 @@
 import React from 'react'
-import First from "../img/discount.jpg"
-import Second from "../img/discount.jpg"
-import Third from "../img/discount.jpg"
+import First from "../img/new-in.jpg";
+import Second from "../img/man-fashion.jpg";
+import Third from "../img/banner.jpg";
 
 export default function Carousel() {
   return (
@@ -14,6 +14,10 @@ export default function Carousel() {
     <div className="carousel-inner">
         <div className="carousel-item active">
         <img className="d-block w-100" src={First} alt="First slide" />
+        <div className="carousel-caption d-none d-md-block">
+          <h1></h1>
+        </div>
+
         </div>
         <div className="carousel-item">
         <img className="d-block w-100" src={Second} alt="Second slide" /> 
