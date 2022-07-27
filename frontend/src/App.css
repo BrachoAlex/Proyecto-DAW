@@ -50,7 +50,7 @@ body{
 
 /* NAVBAR */
 .logo{
-  width: 4rem;
+  width: 13rem;
 }
 
 /* NAV LINKS */ 
@@ -75,4 +75,24 @@ nav ul li{
 
 .navbar-nav >li >a.hover{
   border-top: 0.1875rem solid var(--primary-black);
+}
+
+/* FOOTER */
+footer{
+  padding-top:5rem;
+}
+.list-inline-item{
+  padding-left: 0.95rem;
+}
+
+/*HOME */
+#quote{
+  padding-top:3rem;
+}
+
+#arrivals{
+  padding-top:3rem;
+  padding-bottom:2rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
