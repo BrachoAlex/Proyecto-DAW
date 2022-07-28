@@ -33,9 +33,6 @@ router.get("/getAllProducts/:item", function(req,res){
 
 
 
-
-
-
 router.delete("/deleteProduct",async(req,res) =>{
     let product =await Product.findById(req.body.id)
     if (product){
@@ -46,6 +43,8 @@ router.delete("/deleteProduct",async(req,res) =>{
         res.json({msg: "COULD NOT DELETE PRODUCT"})
     }
 });
+
+
 module.exports = router;
 
 

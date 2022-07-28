@@ -8,6 +8,7 @@ import Footwear from "./components/Footwear";
 import Admin from "./components/Admin";
 import All from "./components/All";
 import Search from "./components/Search";
+import Delete from "./components/Delete"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/admin" element = { <Admin />}  />
         <Route path='/all' element ={ <All />}/>
         <Route path='/search' element ={ <Search />}/>
+        <Route path='/delete' element ={ <Delete />}/>
 
 
       </Routes>
