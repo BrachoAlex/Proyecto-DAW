@@ -8,10 +8,11 @@ import axios from "axios";
 function Add() {
 
     const [name,setName] = useState("")
-    const [image,setImage] = useState("")
+    const [imageUrl,setImage] = useState("")
     const [description,setDescription] = useState("")
     const [price,setPrice] = useState("")
-    const [stock,setStock] = useState("")
+    const [countInStock,setStock] = useState("")
+    const [category,setCategory] = useState("")
 
 
     const nameChangeHandler = (e) => {
@@ -33,14 +34,18 @@ function Add() {
     const stockChangeHandler = (e) =>{
         setStock(e.target.value)
     }
+    const categoryHandler = (e) =>{
+        setCategory(e.target.value)
+    }
     const addCharacter = () => {
     
         const newChar = {
             name: name,
-            image: image,
+            imageUrl: imageUrl,
             description: description,
             price: price,
-            stock: stock
+            countInStock: countInStock,
+            category: category
         }
 
         axios.post("http://localhost:5000/addProduct",newChar)
@@ -58,9 +63,6 @@ function Add() {
     <div>
         <Navbar/>
         <div id="buttons" className="container">
-        <a href="/">
-            <button className="myButton"> Search Items</button>
-        </a>
         <a href="/all">
             <button className="myButton"> All Items</button>
         </a>
@@ -83,8 +85,8 @@ function Add() {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="image">Image</label>
-                    <input type="text" className="form-control" id="imgUrl" value={image} onChange={imageChangeHandler} />
+                    <label htmlFor="imageUrl">Image</label>
+                    <input type="text" className="form-control" id="imageUrl" value={imageUrl} onChange={imageChangeHandler} />
                 </div>
 
                 <div className="form-group">
@@ -98,12 +100,12 @@ function Add() {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="stock">Stock</label>
-                    <input type="text" className="form-control" id="countInStock" value={stock} onChange={stockChangeHandler} />
+                    <label htmlFor="countInStock">Stock</label>
+                    <input type="text" className="form-control" id="countInStock" value={countInStock} onChange={stockChangeHandler} />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="stock">Category</label>
-                    <input type="text" className="form-control" id="category" value={stock} onChange={stockChangeHandler} />
+                    <label htmlFor="category">Category</label>
+                    <input type="text" className="form-control" id="category" value={category} onChange={categoryHandler} />
                 </div>
 
                 </form>

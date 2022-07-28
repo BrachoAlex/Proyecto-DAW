@@ -22,8 +22,7 @@ function All() {
     <div>
         <Navbar/>
         <div className="container">
-            <a href="/"><button className="myButton">Search Items</button></a>
-            <a href="/add"><button className="myButton">Add New Item</button></a>
+            <a href="/Admin"><button className="myButton">Return</button></a>
         
         <div className="row">
             <div className="col-12">
