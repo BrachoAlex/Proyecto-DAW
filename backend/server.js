@@ -11,9 +11,12 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     res.json({ message: "This API is working" });
   });
 app.get("/api/productData", function(req, res){
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.header("Access-Control-Allow-Origin", "*");
   return res.json(productsData);
 });
 app.use("api/products",productRoutes);
