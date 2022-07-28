@@ -4,6 +4,7 @@ import axios from "axios";
     
     function ProductData(){
       let products = axios.get("http://localhost:5000/getAllProducts")
+      console.log(products)
 
       const CONTENT_KEYS = 
       {             
