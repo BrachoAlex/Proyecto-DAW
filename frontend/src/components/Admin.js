@@ -2,45 +2,50 @@ import React,{useState} from 'react'
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import axios from "axios";
+
 
 function Add() {
 
     const [name,setName] = useState("")
-    const [role,setRole] = useState("")
-    const [age,setAge] = useState("")
-    const [fp,setFP] = useState("")
+    const [image,setImage] = useState("")
+    const [description,setDescription] = useState("")
+    const [price,setPrice] = useState("")
+    const [stock,setStock] = useState("")
 
 
     const nameChangeHandler = (e) => {
         setName(e.target.value)
     }
 
-    const roleChangeHandler = (e) => {
-        setRole(e.target.value)
+    const imageChangeHandler = (e) => {
+        setImage(e.target.value)
     }
 
-    const ageChangeHandler = (e) =>{
-        setAge(e.target.value)
+    const descriptionChangeHandler = (e) =>{
+        setDescription(e.target.value)
     }
 
-    const fpChangeHandler = (e) =>{
-        setFP(e.target.value)
+    const priceChangeHandler = (e) =>{
+        setPrice(e.target.value)
     }
 
-    const addCharacter = () => {
-    
-        const newChar = {
-            name: name,
-            role: role,
-            age: age,
-            forcePoints: fp
-        }
+    const stockChangeHandler = (e) =>{
+        setStock(e.target.value)
+    }
+    var body = {
+        name: name,
+        image: image,
+        description: description,
+        price: price,
+        stock: stock,
+    }
 
+    function addCharacter(){
+        axios.post('http://localhost:5000/api/productData/', body).then((respuesta)=>{
 
-        .catch((error)=>{
-            console.log(error)
+            console.log(body);
         })
-
     }
 
   return (
@@ -72,18 +77,23 @@ function Add() {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="role">Role</label>
-                    <input type="text" className="form-control" id="role" value={role} onChange={roleChangeHandler} />
+                    <label htmlFor="image">Image</label>
+                    <input type="text" className="form-control" id="role" value={image} onChange={imageChangeHandler} />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="age">Age</label>
-                    <input type="text" className="form-control" id="age" value = {age} onChange={ageChangeHandler} />
+                    <label htmlFor="description">Description</label>
+                    <input type="text" className="form-control" id="age" value = {description} onChange={descriptionChangeHandler} />
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="force-points">Force Points</label>
-                    <input type="text" className="form-control" id="force-points" value={fp} onChange={fpChangeHandler} />
+                    <label htmlFor="price">Price</label>
+                    <input type="text" className="form-control" id="force-points" value={price} onChange={priceChangeHandler} />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="stock">Stock</label>
+                    <input type="text" className="form-control" id="force-points" value={stock} onChange={stockChangeHandler} />
                 </div>
 
                 </form>
