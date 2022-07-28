@@ -1,16 +1,19 @@
+const { Router } = require("express");
 const express = require("express");
-const router = express.Router();
+const Product =require("../models/Product");
 
-const {getAllProducts, getProductById} = require("../controller/productControllers");
+const router = express();
 
-//GET ALL ITEMS/PRODUCTS FROM DB
-//ROUTE: /api/products
-
-router.get("/", getAllProducts);
-
-//GET SINGLE ITEM/PRODUCT BY ID FROM DB
-//ROUTE: /api/products/:id
-
-router.get("/",getProductById);
+router.get("/getAllProducts", async (req, res) =>{
+    try{
+        const products = await Product.find({});
+        res.json(products);
+    } catch (error){
+        console.error(error);
+        res.status(500).json({message: "SERVER ERROR"});
+    }
+});
 
 module.exports = router;
+
+

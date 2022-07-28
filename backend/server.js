@@ -9,11 +9,13 @@ const app = express();
 
 app.use(express.json());
 
+const indexRoutes = require("./routes/productRoutes")
+
 app.get("/", (req, res) => {
     res.json({ message: "This API is working" });
   });
 
-app.use("api/products",productRoutes);
+app.use("/",productRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,() => console.log(`Server running on port ${PORT}`) )

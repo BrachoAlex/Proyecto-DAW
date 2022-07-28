@@ -1,73 +1,19 @@
 import React from 'react';
 import Catalog from "react-catalog-view";
+import axios from "axios";
     
-    function ProductData(props){
-      let products = 
-       [
-         {
-            id: 1,
-            title: "Canvas",
-            description: "High quality canvas shoes.",
-            price: "20",
-            discounted: "15",
-            currency: "$",
-            image: "http://domain.com/images/1.jpg",
-         },
-         {
-            id: 2,
-            title: "Sport shoes",
-            description: "Sporty shoes, durable at affordable ranges.",
-            price: "25",
-            currency: "$",
-            discounted: "15",
-            image: "http://domain.com/images/5.jpg",
-         },
-         {
-            id: 3,
-            title: "Heels",
-            description: "Fashionable trendy heels.",
-            currency: "$",
-            price: "30",
-            image: "http://domain.com/images/6.jpg",
-         },
-         {
-            id: 4,
-            title: "Sport shoes",
-            description: "Sporty shoes, durable at affordable ranges.",
-            price: "25",
-            currency: "$",
-            discounted: "15",
-            image: "http://domain.com/images/5.jpg",
-         },
-         {
-            id: 5,
-            title: "Sport shoes",
-            description: "Sporty shoes, durable at affordable ranges.",
-            price: "25",
-            currency: "$",
-            discounted: "15",
-            image: "http://domain.com/images/5.jpg",
-         },
-         {
-            id: 6,
-            title: "Sport shoes",
-            description: "Sporty shoes, durable at affordable ranges.",
-            price: "25",
-            currency: "$",
-            discounted: "15",
-            image: "http://domain.com/images/5.jpg",
-         }
-      ];
+    function ProductData(){
+      let products = axios.get("http://localhost:5000/getAllProducts")
 
       const CONTENT_KEYS = 
       {             
-         imgKey: "image",
-         cardTitleKey: "title",
+         imgKey: "imageUrl",
+         cardTitleKey: "name",
          cardDescriptionKey: "description",
          priceKey: "price",
-         discountedPriceKey: "discounted",
-         priceCurrencyKey: "currency",
-         discountCurrencyKey: "currency"
+         discountedPriceKey: "countInStock",
+         priceCurrencyKey: "price",
+         discountCurrencyKey: "price"
       };
 	
       return(
