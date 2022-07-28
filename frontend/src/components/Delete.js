@@ -13,12 +13,12 @@ function Delete() {
         
     }
     const deleteItem = () => {
-        
         const item = {
-            id: id,
+            id : id
         }
+  
 
-        axios.post("http://localhost:5000/addProduct", item)
+        axios.delete("http://localhost:5000/deleteProduct", item)
         .then((response)=>{
             console.log(response)
 
