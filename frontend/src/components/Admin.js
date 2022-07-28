@@ -43,7 +43,7 @@ function Add() {
             stock: stock
         }
 
-        axios.post("http://localhost:5000/api/productData",newChar)
+        axios.post("http://localhost:5000/addProduct",newChar)
         .then((response)=>{
             console.log(response)
 
