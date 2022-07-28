@@ -1,3 +1,5 @@
+const { default: Footwear } = require("../../frontend/src/components/Footwear");
+
 const products = [
     {
         name:"foobar item 1",
@@ -7,6 +9,7 @@ const products = [
         "foobar description",
         price: 9.99,
         countInStock: 9,
+        category:"Footwear",
 
     },
     {
@@ -17,6 +20,7 @@ const products = [
         "foobar description",
         price: 9.99,
         countInStock: 9,
+        category:"Footwear",
 
     },
     {
@@ -27,6 +31,7 @@ const products = [
         "foobar description",
         price: 9.99,
         countInStock: 9,
+        category:"Footwear",
 
     },
     {
@@ -37,6 +42,7 @@ const products = [
         "foobar description",
         price: 9.99,
         countInStock: 9,
+        category:"Footwear",
 
     },
     {
@@ -47,6 +53,7 @@ const products = [
         "foobar description",
         price: 9.99,
         countInStock: 9,
+        category:"Footwear",
 
     },
 ] ;
