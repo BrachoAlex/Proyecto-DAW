@@ -7,6 +7,7 @@ import Accesories from "./components/Accesories";
 import Footwear from "./components/Footwear";
 import Admin from "./components/Admin";
 import All from "./components/All";
+import Search from "./components/Search";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/accesories" element = { <Accesories />}  />
         <Route path="/admin" element = { <Admin />}  />
         <Route path='/all' element ={ <All />}/>
+        <Route path='/search' element ={ <Search />}/>
 
 
       </Routes>

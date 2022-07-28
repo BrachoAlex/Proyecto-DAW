@@ -66,6 +66,9 @@ function Add() {
         <a href="/all">
             <button className="myButton"> All Items</button>
         </a>
+        <a href="/search">
+            <button className="myButton"> Search Items</button>
+        </a>
         </div>
 
         <div className="container">

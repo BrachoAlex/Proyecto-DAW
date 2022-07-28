@@ -20,6 +20,22 @@ router.post("/addProduct", async(req,res) =>{
     res.json(product);
 });
 
+router.get("/getAllProducts/:item", function(req,res){
+    var chosen = req.params.item;
+    console.log(chosen);
+    for (var i = 0; i< products.length; i++){
+        if(chosen === products[i].name){
+            return res.json(products[i]);
+        }
+    }
+    return res.json(false);
+});
+
+
+
+
+
+
 router.delete("/deleteProduct",async(req,res) =>{
     let product =await Product.findById(req.body.id)
     if (product){
