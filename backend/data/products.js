@@ -1,5 +1,3 @@
-const { default: Footwear } = require("../../frontend/src/components/Footwear");
-
 const products = [
     {
         name:"foobar item 1",
