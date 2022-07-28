@@ -84,22 +84,26 @@ function Add() {
 
                 <div className="form-group">
                     <label htmlFor="image">Image</label>
-                    <input type="text" className="form-control" id="role" value={image} onChange={imageChangeHandler} />
+                    <input type="text" className="form-control" id="imgUrl" value={image} onChange={imageChangeHandler} />
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="description">Description</label>
-                    <input type="text" className="form-control" id="age" value = {description} onChange={descriptionChangeHandler} />
+                    <input type="text" className="form-control" id="description" value = {description} onChange={descriptionChangeHandler} />
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="price">Price</label>
-                    <input type="text" className="form-control" id="force-points" value={price} onChange={priceChangeHandler} />
+                    <input type="text" className="form-control" id="price" value={price} onChange={priceChangeHandler} />
                 </div>
 
                 <div className="form-group">
                     <label htmlFor="stock">Stock</label>
-                    <input type="text" className="form-control" id="force-points" value={stock} onChange={stockChangeHandler} />
+                    <input type="text" className="form-control" id="countInStock" value={stock} onChange={stockChangeHandler} />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="stock">Category</label>
+                    <input type="text" className="form-control" id="category" value={stock} onChange={stockChangeHandler} />
                 </div>
 
                 </form>
