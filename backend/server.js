@@ -3,20 +3,19 @@ const express = require ("express");
 const connectDB = require("./config/db");
 const productRoutes = require("./routes/productRoutes");
 const productsData = require("./data/products");
+const cors = require("cors");
 
 connectDB();
 
 const app = express();
 
 app.use(express.json());
+app.use(cors())
 
 app.get("/", (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
     res.json({ message: "This API is working" });
   });
 app.get("/api/productData", function(req, res){
-  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-  res.header("Access-Control-Allow-Origin", "*");
   return res.json(productsData);
 });
 app.use("api/products",productRoutes);
