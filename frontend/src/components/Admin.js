@@ -33,19 +33,25 @@ function Add() {
     const stockChangeHandler = (e) =>{
         setStock(e.target.value)
     }
-    var body = {
-        name: name,
-        image: image,
-        description: description,
-        price: price,
-        stock: stock,
-    }
+    const addCharacter = () => {
+    
+        const newChar = {
+            name: name,
+            image: image,
+            description: description,
+            price: price,
+            stock: stock
+        }
 
-    function addCharacter(){
-        axios.post('http://localhost:5000/api/productData/', body).then((respuesta)=>{
+        axios.post("http://localhost:5000/api/productData",newChar)
+        .then((response)=>{
+            console.log(response)
 
-            console.log(body);
         })
+        .catch((error)=>{
+            console.log(error)
+        })
+
     }
 
   return (
